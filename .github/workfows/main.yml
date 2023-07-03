@@ -1,0 +1,31 @@
+name: CI/CD 
+
+on:
+  push:
+    branches:
+      - root
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Compose
+      run: docker-compose -f docker-compose.yml build
+
+    - name: Run tests
+      run: docker-compose -f docker-compose.yml run --rm app npm test
+
+    - name: Deploy to production
+      uses: appleboy/ssh-action@master
+      with:
+        host: your-production-server
+        username: your-ssh-username
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd /path/to/your/app
+          docker-compose -f docker-compose.yml pull
+          docker-compose -f docker-compose.yml up -d
