@@ -3,7 +3,4 @@ node_modules
 npm-debug.log
 yarn-error.log
 
-# Directories
-logs
-dist
-coverage
+
