@@ -2,13 +2,10 @@
 
 ## Available Scripts
 
->make sure the following
+make sure the following
 
-* docker in your machine
-* internet connection
-
-
-In the project directory, you can run:
+>* docker in your machine
+>* internet connection
 
 
 run in production env
