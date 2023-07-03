@@ -1,4 +1,4 @@
-# Getting Started Nodejs with docker dockerCompose 
+# Nodejs | DockerCompose | Typescript | Mongodb
 
 ## Available Scripts
 
