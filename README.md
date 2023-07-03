@@ -12,7 +12,6 @@ run in production env
 
 ```bash
 sudo docker-compose up --build
-
 ```
 
 run in development env
